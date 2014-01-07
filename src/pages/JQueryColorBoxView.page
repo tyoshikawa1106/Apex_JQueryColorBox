@@ -1,0 +1,39 @@
+<apex:page showHeader="true" sidebar="false" id="page">
+    
+    <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" />
+    <apex:includeScript value="{!URLFOR($Resource.JQueryColorBox, 'jquery.colorbox-min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.JQueryColorBox, 'example1/colorbox.css')}"/>
+    
+    <style type="text/css">
+        #page {
+            width: 980px;
+            margin: 0 auto;
+        }
+        
+        #pageBody {
+            margin-top: 30px;
+        }
+    </style>
+    
+    <apex:form id="form">
+        <div id="page">
+            <div id="pageBody">
+                <section class="mainVisual">
+                    <apex:outputLink value="{!URLFOR($Resource.JQueryColorBoxImages, 'Saasy.jpg')}" styleClass="group01" title="Saasy">
+                        <apex:image value="{!URLFOR($Resource.JQueryColorBoxImages, 'Saasy.jpg')}" alt="" title="Saasy" width="400" height="250" />
+                    </apex:outputLink>
+                </section>
+            </div>
+        </div>
+    </apex:form>
+    
+    <script type="text/javascript">
+        var $j = jQuery.noConflict();
+        $j(document).ready(function(){
+            $j(".group01").colorbox({
+                rel:'group01',
+                width:800
+            });
+        });
+    </script>
+</apex:page>
