@@ -1,7 +1,7 @@
 Apex_JQueryColorBox
 ===================
 
-JQueryのColorBoxをVisualforceで動かしてみました。  
+jQueryのColorBoxをVisualforceで動かしてみました。  
 CSSを読み込む際に指定しているexample1フォルダをexample2~5のフォルダに変更することで
 別のテーマに切り替えることも可能です。
   
